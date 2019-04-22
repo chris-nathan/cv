@@ -1,5 +1,13 @@
 $(document).ready(function() {
-  $(".top-cloud").fadeIn("slow");
-  $(".bottom-cloud").fadeIn("slow");
-  $(".mountain").slideDown();
+  document.oncontextmenu = function() {
+    return false;
+  }
+
+  function set_img_dims() { // set body height = window height
+    $('#portrait-card').height($(window).width() * 0.45);
+    $('#portrait-card').width($(window).width() * 0.3);
+  };
+
+  set_img_dims();
+
 });
